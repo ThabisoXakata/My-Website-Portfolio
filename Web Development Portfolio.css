@@ -25,6 +25,7 @@ body {
     text-decoration: none;
     text-align: center;   
 }
+
 .navbar a {
     font-size: 20px;
     color: #ededed;
@@ -51,6 +52,7 @@ body {
     font-size: 56px;
     font-weight: 500;
 }
+
 .home-content h3 {
     font-size: 29px;
     max-width: 600px;
@@ -73,11 +75,37 @@ body {
     width: 150px;
     height: 100%;
     background:transparent;
-    border:2px solid #ededed;
+    border:2px solid tomato;
     border-radius: 8px;
     font-size: 19px;
-    color: tomato;
+    color:tomato;
     text-decoration: none;
     font-weight: 500;
     letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+}
+.button-box a:hover {
+    color:#ededed;
+}
+.images {
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+.images img {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+.images:hover .shape {
+    bottom: 40px;
+}
+.images:hover .Coverphoto {
+    left: 45%;
 }
