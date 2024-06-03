@@ -453,6 +453,16 @@ footer {
         margin-top: 0;
         text-align: center;
         align-items: center;
+        justify-content: center;
+    }
+    .home{
+        margin-top: 400px;
+        justify-content: center;
+        align-items: center;
+    }
+    .button-box {
+        justify-content: center;
+        align-items: center;
     }
     .logos {
         text-align: center;
@@ -465,16 +475,12 @@ footer {
         transition: 0.4s;
     }
     .images {
-        width: 100%;
+        width: 70%;
+        height: fit-content;
         height: auto;
-        position: relative;
-        top: 50%;
-        left: 50%;
-        margin-bottom: 20px; /* Adjust spacing as needed */
+        left: 0%;
+        margin-bottom: 150px; /* Adjust spacing as needed */
         z-index: 10; /* Ensure images are on top */
-        display: none;
-        justify-content: center;
-        align-items: center;
     }
     
     .images img {
@@ -484,8 +490,10 @@ footer {
         bottom: 0;
         transform: translateX(0);
         transition: bottom 1s, left 1s;
-        margin-bottom: 0;
+        margin-bottom:60px;
         border-radius: 200px;
+        justify-content: center;
+        align-items: center;
     }
     
     .images:hover .shape {
@@ -495,13 +503,5 @@ footer {
     .images:hover .Coverphoto {
         left: 45%;
     }
-    
-    .menu {
-        justify-content: start;
-        flex-direction: column;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        font-size: 5px;
-    }
+
 }
