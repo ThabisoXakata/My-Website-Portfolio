@@ -450,6 +450,7 @@ footer {
 
 @media screen and (width < 1400px) {
     body {
+        width: 100%;
         margin-top: 0;
         text-align: center;
         align-items: center;
@@ -459,6 +460,14 @@ footer {
         margin-top: 400px;
         justify-content: center;
         align-items: center;
+    }
+    .abouthome {
+        margin-top: 400px;
+        justify-content: center;
+        align-items: center;
+    }
+    .logos {
+        text-align: center;
     }
     .button-box {
         justify-content: center;
@@ -475,7 +484,7 @@ footer {
         transition: 0.4s;
     }
     .images {
-        width: 72%;
+        width: 70%;
         height: fit-content;
         height: auto;
         left: 0%;
@@ -503,5 +512,67 @@ footer {
     .images:hover .Coverphoto {
         left: 45%;
     }
-
+@media screen and (width < 900px) {
+        body {
+            width: 100%;
+            margin-top: 0;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        .home{
+            margin-top: 400px;
+            justify-content: center;
+            align-items: center;
+        }
+        .abouthome {
+            margin-top: 400px;
+            justify-content: center;
+            align-items: center;
+        }
+        .button-box {
+            justify-content: center;
+            align-items: center;
+        }
+        .logos p {
+            text-align: center;
+        }
+        .hamburger {
+            width: 25px;
+            height: 3px;
+            background-color: #ededed;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+        .images {
+            width: 70%;
+            height: fit-content;
+            height: auto;
+            left: 0%;
+            margin-bottom: 150px; /* Adjust spacing as needed */
+            z-index: 10; /* Ensure images are on top */
+        }
+        
+        .images img {
+            width: 70%;
+            margin-right: 50%; /* Adjust size as needed */
+            height: auto;
+            position: absolute;
+            bottom: 0;
+            transform: translateX(0);
+            transition: bottom 1s, left 1s;
+            margin-bottom:60px;
+            border-radius: 200px;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .images:hover .shape {
+            bottom: 40px;
+        }
+        
+        .images:hover .Coverphoto {
+            left: 45%;
+        }
+    }    
 }
