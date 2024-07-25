@@ -34,6 +34,8 @@
     </header>
     <!--Home Page Content-->
 <!--Contact Form-->
+<br><br><br>
+<br><br><br>
 
 <div class="contact-form">
     <h2>Contact Me</h2>
@@ -45,24 +47,26 @@
       <button type="submit">Submit</button>
     </form>
   </div>
-  
+  <br><br><br>
 
-<section class="wrapper">
+  <section class="wrapper">
     <div class="container">
-        <div class="star-widget">
-            <input type="radio" name="rate" id="rate-5">
-            <label for="rate-5" class="fas fa-star"></label>
-            <input type="radio" name="rate" id="rate-4">
-            <label for="rate-4" class="fas fa-star"></label>
-            <input type="radio" name="rate" id="rate-3">
-            <label for="rate-3" class="fas fa-star"></label>
-            <input type="radio" name="rate" id="rate-2">
-            <label for="rate-2" class="fas fa-star"></label>
-            <input type="radio" name="rate" id="rate-1">
-            <label for="rate-1" class="fas fa-star"></label>
-        </div>
-    </div>
+        <form action="https://formsubmit.co/6df9972990ed5512a34f39c018473bc5" method="POST">
+          <div class="star-rating">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <input type="hidden" name="rating" id="selectedRating">
+          <button type="submit" style="border: none; padding:10px;">Submit</button>
+        </form>
+      </div>
+      
 </section>
+
+
 
 <section class="Contact-information">
     <div class="social-media">
@@ -80,26 +84,22 @@
     </section>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const stars = document.querySelectorAll('.star-widget input');
-            stars.forEach(star => {
-                star.addEventListener('change', function () {
-                    updateStars(star);
-                });
-            });
+        const stars = document.querySelectorAll('.star');
+        const ratingInput = document.getElementById('selectedRating');
+        
+        stars.forEach((star, index) => {
+          star.addEventListener('click', () => {
+            // Remove active class from all stars
+            stars.forEach(star => star.classList.remove('active'));
+            // Add active class to the clicked star and all previous stars
+            for (let i = 0; i <= index; i++) {
+              stars[i].classList.add('active');
+            }
+            // Update hidden input with the selected rating (index + 1 represents the number of selected stars)
+            ratingInput.value = index + 1;
+          });
         });
         
-        function updateStars(star) {
-            const stars = document.querySelectorAll('.star-widget input');
-            stars.forEach(s => {
-                const label = s.nextElementSibling;
-                if (s.checked || s === star) {
-                    label.classList.add('checked');
-                } else {
-                    label.classList.remove('checked');
-                }
-            });
-        }
     </script>
       
 </body>

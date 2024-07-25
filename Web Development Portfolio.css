@@ -218,38 +218,33 @@ body {
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
+    border: none;
+    align-items: center;
   }
   
 
 
 
 
-.star-widget {
+  .container {
+    text-align: center;
+  }
+  
+  .star-rating {
+    width: 340px;
     display: flex;
-    direction: row-reverse;
-    justify-content: center;
-}
-
-.star-widget input {
-    display: none;
-}
-
-.star-widget label {
-    font-size: 2rem;
-    color: #ddd;
+    justify-content: space-between;
+    padding: 5px;
+  }
+  .star {
+    font-size: 30px;
+    color: rgb(211, 211, 211);
     cursor: pointer;
-    transition: color 0.2s;
-}
+  }
+  .star.active {
+    color: rgb(255, 120, 57); /* Or any desired color */
+  }
 
-.star-widget input:checked ~ label,
-.star-widget label:hover,
-.star-widget label:hover ~ label {
-    color: rgb(255, 120, 57);
-}
-
-.star-widget input:checked ~ label.checked {
-    color: rgb(255, 120, 57);
-}
 
 .social-media {
     border-radius: 1rem;
@@ -416,9 +411,10 @@ footer {
 }
 .container  {
     width: 400px;
-    background: #111;
+    background: transparent;
     padding: 20px 30px;
     border: 1px solid #444;
+    backdrop-filter: blur(2.5px);
     border-radius: 5px;
     flex-direction: column;
 }
